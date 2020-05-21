@@ -1,0 +1,24 @@
+{
+  "name": "javascript_project",
+  "version": "1.0.0",
+  "description": "DOM operation. Creation of plugins that give more functionality to the video player. Implementation of events in an object according to the needs of the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfrancobedoya/javascript_project.git"
+  },
+  "keywords": [],
+  "author": "Cristian Franco Bedoya <cfrancobedoya@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cfrancobedoya/javascript_project/issues"
+  },
+  "homepage": "https://github.com/cfrancobedoya/javascript_project#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
