@@ -19,3 +19,18 @@ Both with async and defer we can make asynchronous calls but it has its differen
 * **defer**: The request is the same asynchronous as in the async but it will defer the execution of the Javascript until the end of the whole document loading.
 
 Keep in mind that when you load a page and a script is found to execute, the whole load stops. That is why it is recommended to add your scripts just before closing the body so that the entire document is available.
+
+# Scope
+The scope is what defines the lifetime of a variable, in which parts of our code can be used.
+
+## Global scope
+Variables available globally, the word var is used, they are accessible by all the scripts that are loaded on the page. There is a lot of risk of overwriting here.
+
+## Function Scope
+Variables declared within a function only visible within itself (including the arguments passed to the function).
+
+## Block Scope
+Variables defined within a block, for example variables declared within a while or for loop. Let and const are used to declare these types of variables.
+
+## Module Scope
+When a script of type module is denoted with the attribute type = "module the variables are limited to the file in which they are declared.
