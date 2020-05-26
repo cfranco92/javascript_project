@@ -34,3 +34,8 @@ Variables defined within a block, for example variables declared within a while 
 
 ## Module Scope
 When a script of type module is denoted with the attribute type = "module the variables are limited to the file in which they are declared.
+
+# Closures
+They are functions that return a function or an object with functions that keep the variables that were declared out of scope.
+
+Closures serve to have something similar to private variables, a feature that does not have JavaScript by default. In other words, they encapsulate variables that cannot be directly modified by other objects, only by functions belonging to it.
