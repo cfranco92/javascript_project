@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/exercises/">Go Back</a>
+    <p><em>Open the console</em></p>
+
+    <ul>
+        <li><button class="call-to-action">Learn</button></li>
+        <li><button class="call-to-action">Learn more</button></li>
+        <li><button class="call-to-action">¡Never stop learning!</button></li>
+    </ul>
+
+    <script>
+        // Set 'this' using 'call'
+        function greet() {
+            console.log(`Hello. I'm ${this.name} ${this.lastName}`);
+        }
+
+        const cristian = {
+            name: 'Cristian',
+            lastName: 'Franco'
+        }
+
+        greet.call(cristian);
+
+        // Set 'this' using 'call' and pass arguments to the function
+        function walk(meters, direction) {
+            console.log(`${this.name} walk ${meters} meters towards ${direction}`);
+        }
+
+        walk.call(cristian, 400, 'north');
+
+        // Set 'this' using apply and pass arguments to the function
+        const values = [400, "south"];
+        walk.apply(cristian, values);
+
+        // Set 'this' to a new function using 'bind'
+        const cristianGreet = greet.bind(cristian);
+        cristianGreet();
+
+        const cristianWalk = walk.bind(cristian, 2000);
+        cristianWalk('south');
+
+        // When it's useful to use one of these methods
+        const buttons = document.getElementsByClassName("call-to-action");
+        // buttons.forEach(button => {
+        //     button.onclick = () => alert('Never stop learning!');
+        // });
+
+        Array.prototype.forEach.call(buttons, button => {
+            button.onclick = () => alert('Never stop learning!');
+        })
+    </script>
+</body>
+
+</html>
