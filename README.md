@@ -56,3 +56,10 @@ The call, apply and bind functions are part of the Function prototype. Every fun
 * **functionName.call()**. Execute the function receiving the this as the first argument and the following are the arguments received by the function that called the call.
 * **functionName.apply()**. Executes the function receiving this as the first argument and an array with the arguments that the function that called apply receives as the second argument.
 * **functionName.bind()**. It receives this as the first and only argument. It doesn't execute the function, it just returns another function with the new built-in this.
+
+# Prototype
+In Javascript everything is objects, we don't have classes, we don't have that plane to create objects.
+
+All objects "inherit" from one prototype, which in turn inherits from another prototype, and so on, creating what is called the prototype chain.
+
+The keyword new creates a new object that "inherits" all the properties of the prototype from another object. Do not confuse prototype with proto which is just a property on each instance that points to the prototype it inherits from.
