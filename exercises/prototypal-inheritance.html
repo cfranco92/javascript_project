@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/exercises/">Go Back</a>
+    <p><em>Open the console</em></p>
+
+    <script>
+        function Hero(name) {
+            this.name = name;
+        };
+
+        Hero.prototype.greet = function() {
+            console.log(`Hello, I'm ${this.name}`);
+        }
+
+        const zelda = new Hero('Zelda');
+
+        // Instance properties
+        console.log(`Name: ${zelda.name}`);
+
+        // Class properties
+        console.log(`Greet: ${zelda.greet}`);
+
+        // Inherited properties ex: toString
+        console.log(`toString: ${zelda.toString}`);
+
+        // hasOwnProperty (where does toString come from or this?)
+        console.log(`zelda.hasOwnProperty("greet"): ${zelda.hasOwnProperty('greet')}`);
+    </script>
+</body>
+</html>

@@ -63,3 +63,10 @@ In Javascript everything is objects, we don't have classes, we don't have that p
 All objects "inherit" from one prototype, which in turn inherits from another prototype, and so on, creating what is called the prototype chain.
 
 The keyword new creates a new object that "inherits" all the properties of the prototype from another object. Do not confuse prototype with proto which is just a property on each instance that points to the prototype it inherits from.
+
+# Prototypal inheritance
+By default the objects in JavaScript have as prototype Object which is the starting point of all objects, it is the parent prototype. Object is the root of everything, therefore it has an undefined parent prototype.
+
+When a function or variable that is not in the same object that called it is called, the entire prototype chain is searched until it is found or returns undefined.
+
+The hasOwnProperty function is used to verify if a property is part of the object or if it is inherited from its prototype chain.
