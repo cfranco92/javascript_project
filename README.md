@@ -85,3 +85,40 @@ The parser is 15% to 20% of the execution process, so you have to use the code's
 Links:
 * https://esprima.org/
 * https://astexplorer.net/
+
+# How does the JavaScript Engine work?
+What does a JS Engine do?
+* Receive source code.
+* Parse the code and produce an Abstract Syntax Tree (AST).
+* Compiled to bytecode and executed.
+* Machine code is optimized and base code is replaced.
+
+Once we have the AST, now we have to convert it to Bytecode.
+
+**Bytecode** is like the assembler code but instead of operating on the processor it operates on the V8 virtual machine of the browser.
+
+**Machine code** is the lowest level, it is binary code that goes directly to the processor.
+
+**The profiler** is located between the bytecode and the optimizer
+
+Each virtual machine has its peculiarities, for example V8 has something called Hot Functions.
+
+When a function statement is executed very frequently, V8 calls it a hot function and performs an optimization that consists of converting it to machine code so that it does not have to be interpreted again and speed up its execution.
+
+Each browser has its JavaScript Engine implementation:
+* SpiderMonkey - Firefox
+* Chackra - Edge
+* JavaScriptCore - Safari
+* V8 - Chrome
+
+## V8 Engine - Chrome
+![](./readmeImages/v8Engine.png)
+
+## SpiderMonkey - Firefox
+![](./readmeImages/spiderMonkey.png)
+
+## Chacra - Edge
+![](./readmeImages/chakra.png)
+
+## JavaScriptCore - Safari
+![](./readmeImages/javascriptCore.png)
