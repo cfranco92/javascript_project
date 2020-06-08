@@ -122,3 +122,17 @@ Each browser has its JavaScript Engine implementation:
 
 ## JavaScriptCore - Safari
 ![](./readmeImages/javascriptCore.png)
+
+# Event Loop
+The Event Loop makes Javascript appear to be multithreading even though it runs in a single process.
+
+Javascript is organized using the following data structures:
+* **Stack**. Stack in an organized way the different instructions that are called. Thus, it has a trace of where the program is, where we are at.
+* **Memory Heap**. In a disorganized way, information on variables and scope is stored.
+* **Schedule Tasks**. Here, tasks scheduled for execution are added to the queue.
+* **Task Queue**. Here are added the tasks that are already ready to go to the stack and be executed. The stack must be empty for this to happen.
+* **MicroTask Queue**. Here the promises are added. This Queue is the one with the highest priority.
+
+The Event Loop is a loop that is running all the time and periodically goes through checking queues and the stack moving tasks between these two structures.
+
+![](./readmeImages/eventLoop.png)
