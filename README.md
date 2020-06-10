@@ -136,3 +136,12 @@ Javascript is organized using the following data structures:
 The Event Loop is a loop that is running all the time and periodically goes through checking queues and the stack moving tasks between these two structures.
 
 ![](./readmeImages/eventLoop.png)
+
+# Promises
+To create the promises we use the Promise class. The Promise constructor receives a single argument, a two parameter callback, resolve and reject. resolve is the function to execute when it is resolved and reject when it is rejected.
+
+The asynchronous / wait is just sugar syntax of a promise, below is exactly the same.
+
+The Promise class has some pretty useful static methods:
+* **Promise.all.** It gives error if one of the promises is rejected.
+* **Promise.race.** Return only the promise that is resolved first.
