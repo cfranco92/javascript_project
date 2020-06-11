@@ -145,3 +145,8 @@ The asynchronous / wait is just sugar syntax of a promise, below is exactly the 
 The Promise class has some pretty useful static methods:
 * **Promise.all.** It gives error if one of the promises is rejected.
 * **Promise.race.** Return only the promise that is resolved first.
+
+# Getters and setters
+Getters and setters are functions that we can use in an object to have virtual properties. The keywords set and get are used to create these properties.
+
+These properties, being functions, can carry a validation through and be used with the assignment operator as if they were just another variable inside the object.
