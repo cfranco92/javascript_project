@@ -157,3 +157,12 @@ These properties, being functions, can carry a validation through and be used wi
 * https://github.com/hiddentao/fast-levenshtein
 
 The proxy serves to intercept the reading of properties of an object (the get, and set) among many other functions. Thus, before the call reaches the object, we can manipulate it with a logic that we define.
+
+# Generators
+Generators are special functions, they can pause their execution and then return to the point where they stayed remembering their scope.
+
+Some of its characteristics:
+* The generators return a function.
+* They start suspended and you have to call next for them to run.
+* They return a value and a boolean done that defines if they have already finished.
+* yield is the instruction that returns a value each time we call next and stops the execution of the generator.
