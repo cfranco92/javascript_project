@@ -150,3 +150,10 @@ The Promise class has some pretty useful static methods:
 Getters and setters are functions that we can use in an object to have virtual properties. The keywords set and get are used to create these properties.
 
 These properties, being functions, can carry a validation through and be used with the assignment operator as if they were just another variable inside the object.
+
+# Proxy
+## Links
+* https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Proxy
+* https://github.com/hiddentao/fast-levenshtein
+
+The proxy serves to intercept the reading of properties of an object (the get, and set) among many other functions. Thus, before the call reaches the object, we can manipulate it with a logic that we define.
